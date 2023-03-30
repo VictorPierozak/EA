@@ -1,0 +1,11 @@
+function result = makeMatrix(vector, scale, num)
+vector = repmat(vector,scale,1);
+vector = reshape(vector,1,[]);
+vector = repmat(vector,scale,1);
+result = [];
+for i = 1:scale:num*scale
+result = [result; vector(:, i:(i + num*scale-1))];
+end
+
+end
+
